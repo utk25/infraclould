@@ -22,8 +22,8 @@ Reponse -> {
 }
 
 # How to run
-Run main method on class InfraCloudApplication. This will bring up local tomcat server and you can access endpoints on localhost
-OR
-use command docker
-docker run -p 8081:8080 infracloud/infracloud-url-shortener after pulling image from here (https://drive.google.com/file/d/1uC2JIaghmddc-ojFioikq4NsTH4EVOlh/view?usp=sharing)
-This will bring up server on you local machine and you can access endpoints on http://localhost:8081
+Run main method on class InfraCloudApplication. This will bring up local tomcat server and you can access endpoints on localhost <br />
+OR <br />
+use command docker <br />
+docker run -p 8081:8080 infracloud/infracloud-url-shortener after pulling image from here (https://drive.google.com/file/d/1uC2JIaghmddc-ojFioikq4NsTH4EVOlh/view?usp=sharing) <br />
+This will bring up server on you local machine and you can access endpoints on http://localhost:8081 <br />
