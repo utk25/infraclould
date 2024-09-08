@@ -21,7 +21,7 @@ Reponse -> {
     }
 }
 
-#How to run
+# How to run
 Run main method on class InfraCloudApplication. This will bring up local tomcat server and you can access endpoints on localhost
 OR
 use command docker
