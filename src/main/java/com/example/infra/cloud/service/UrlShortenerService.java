@@ -10,4 +10,6 @@ public interface UrlShortenerService {
 	UrlShortenerResponse shortenUrl(UrlShortenerRequest urlShortenerRequest);
 
 	UrlShortenerResponse getOriginalUrl(String shortUrl);
+
+	UrlShortenerResponse getStats();
 }

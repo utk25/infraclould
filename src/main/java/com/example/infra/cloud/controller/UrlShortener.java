@@ -40,4 +40,10 @@ public class UrlShortener {
 		headers.setLocation(URI.create(urlShortenerResponse.getOriginalUrl()));
 		return new ResponseEntity<>(headers, HttpStatus.MOVED_PERMANENTLY);
 	}
+
+	@GetMapping("/stats")
+	public ResponseEntity<UrlShortenerResponse> getStats() {
+		UrlShortenerResponse urlShortenerResponse = urlShortenerService.getStats();
+		return ResponseEntity.ok(urlShortenerResponse);
+	}
 }

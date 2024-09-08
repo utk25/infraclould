@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public class UrlShortenerServiceImpl implements UrlShortenerService {
 
@@ -28,5 +30,11 @@ public class UrlShortenerServiceImpl implements UrlShortenerService {
 	public UrlShortenerResponse getOriginalUrl(String shortUrl) {
 		String originalUrl = urlShortenerStrategy.getOriginalUrl(shortUrl);
 		return UrlShortenerResponse.builder().originalUrl(originalUrl).build();
+	}
+
+	@Override
+	public UrlShortenerResponse getStats() {
+		Map<String, Integer> stats = urlShortenerStrategy.getStats();
+		return UrlShortenerResponse.builder().stats(stats).build();
 	}
 }
