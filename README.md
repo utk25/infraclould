@@ -21,6 +21,9 @@ Reponse -> {
     }
 }
 
+# Disclaimer
+Error conditions/Validations not handled. APIs are supposed to work for happy case only. <br />
+
 # How to run
 Run main method on class InfraCloudApplication. This will bring up local tomcat server and you can access endpoints on localhost <br />
 OR <br />
