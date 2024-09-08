@@ -2,19 +2,19 @@
 
 This project represents a url-shortener
 
-Endpoints
+Endpoints <br />
 
-POST
-/api/v1/shorten
-Request -> {"longUrl": "https://www.google.com"}
-Reponse -> {"shortenedUrl": "http://localhost:8080/api/v1/90c8320"}
+POST <br />
+/api/v1/shorten <br />
+Request -> {"longUrl": "https://www.google.com"} <br />
+Reponse -> {"shortenedUrl": "http://localhost:8080/api/v1/90c8320"} <br />
 
-GET
-http://localhost:8080/api/v1/90c8320
-Reponse -> will redirect to original url
+GET <br />
+http://localhost:8080/api/v1/90c8320 <br />
+Reponse -> will redirect to original url <br />
 
-GET
-/api/v1/stats
+GET <br />
+/api/v1/stats <br />
 Reponse -> {
     "stats": {
         "www.google.com": 2
