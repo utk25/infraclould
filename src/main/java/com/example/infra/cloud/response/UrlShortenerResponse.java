@@ -10,4 +10,5 @@ import lombok.ToString;
 public class UrlShortenerResponse {
 
 	private final String shortenedUrl;
+	private final String originalUrl;
 }

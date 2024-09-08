@@ -39,4 +39,20 @@ class InfraCloudApplicationTests {
 		Assertions.assertNotNull(response.getBody());
 		Assertions.assertEquals(shortLink, response.getBody().getShortenedUrl());
 	}
+
+	@Test
+	void testOriginalUrlUsingDefaultStrategy() {
+		UrlShortenerRequest urlShortenerRequest = UrlShortenerRequest.builder().longUrl("https://www.google.com/").build();
+		ResponseEntity<UrlShortenerResponse> response = urlShortener.shortenUrl(urlShortenerRequest);
+		Assertions.assertEquals(HttpStatus.valueOf(200), response.getStatusCode());
+		Assertions.assertNotNull(response.getBody());
+		String shortLink = response.getBody().getShortenedUrl();
+		response = urlShortener.shortenUrl(urlShortenerRequest);
+		Assertions.assertEquals(HttpStatus.valueOf(200), response.getStatusCode());
+		Assertions.assertNotNull(response.getBody());
+		Assertions.assertEquals(shortLink, response.getBody().getShortenedUrl());
+
+		response = urlShortener.getOriginalUrl(shortLink);
+		Assertions.assertEquals(HttpStatus.valueOf(301), response.getStatusCode());
+	}
 }

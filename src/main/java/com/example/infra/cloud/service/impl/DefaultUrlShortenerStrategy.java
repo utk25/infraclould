@@ -53,6 +53,7 @@ public class DefaultUrlShortenerStrategy implements UrlShortenerStrategy {
 
 	@Override
 	public String getOriginalUrl(String shortUrl) {
-		return "";
+		String prefixedUrl = prefix + shortUrl;
+		return shortToLongMap.getOrDefault(prefixedUrl, "");
 	}
 }

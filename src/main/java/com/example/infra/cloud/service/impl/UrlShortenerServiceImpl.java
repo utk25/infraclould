@@ -23,4 +23,10 @@ public class UrlShortenerServiceImpl implements UrlShortenerService {
 		String shortUrl = urlShortenerStrategy.shortenUrl(urlShortenerRequest.getLongUrl());
 		return UrlShortenerResponse.builder().shortenedUrl(shortUrl).build();
 	}
+
+	@Override
+	public UrlShortenerResponse getOriginalUrl(String shortUrl) {
+		String originalUrl = urlShortenerStrategy.getOriginalUrl(shortUrl);
+		return UrlShortenerResponse.builder().originalUrl(originalUrl).build();
+	}
 }
